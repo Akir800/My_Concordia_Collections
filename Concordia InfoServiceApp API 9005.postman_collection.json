@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "de240e22-9165-4c05-8c75-4faf717845bd",
+		"name": "Concordia InfoServiceApp API 9005",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23741924",
+		"_collection_link": "https://blue-meadow-354368.postman.co/workspace/My-Workspace~ecf76eeb-897b-49fe-8f41-d2322e09b063/collection/23741924-de240e22-9165-4c05-8c75-4faf717845bd?action=share&source=collection_link&creator=23741924"
+	},
+	"item": [
+		{
+			"name": "Bank-Branches",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.14:9005/bank-branches/",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9005",
+					"path": [
+						"bank-branches",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Bank-Branches",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bankBranchType\": \"LOCAL_BRANCH\",\r\n  \"branchNumber\": \"strin\",\r\n  \"branchCoordinates\": \"string\",\r\n  \"city\": \"string\",\r\n  \"branchAddress\": \"string\",\r\n  \"cashWithdraw\": true,\r\n  \"moneyTransfer\": true,\r\n  \"acceptPayment\": true,\r\n  \"currencyExchange\": true,\r\n  \"exoticCurrency\": true,\r\n  \"ramp\": true,\r\n  \"replenishCard\": true,\r\n  \"replenishAccount\": true,\r\n  \"consultation\": true,\r\n  \"insurance\": true,\r\n  \"monday\": \"string\",\r\n  \"tuesday\": \"string\",\r\n  \"wednesday\": \"string\",\r\n  \"thursday\": \"string\",\r\n  \"friday\": \"string\",\r\n  \"saturday\": \"string\",\r\n  \"sunday\": \"string\",\r\n  \"closed\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.17.1.14:9005/bank-branches",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9005",
+					"path": [
+						"bank-branches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exchange-rates",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://172.17.1.14:9005/exchange-rates/",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9005",
+					"path": [
+						"exchange-rates",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exchange-Rates/online/currency_converter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.14:9005/exchange-rates/online/currency_converter",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9005",
+					"path": [
+						"exchange-rates",
+						"online",
+						"currency_converter"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

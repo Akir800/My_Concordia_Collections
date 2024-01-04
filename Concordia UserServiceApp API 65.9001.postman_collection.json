@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "cd394974-a43e-40a3-9e77-01025d2f9d3d",
+		"name": "Concordia UserServiceApp API 65.9001",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23741924",
+		"_collection_link": "https://blue-meadow-354368.postman.co/workspace/My-Workspace~ecf76eeb-897b-49fe-8f41-d2322e09b063/collection/23741924-cd394974-a43e-40a3-9e77-01025d2f9d3d?action=share&source=collection_link&creator=23741924"
+	},
+	"item": [
+		{
+			"name": "Настройки уведомлений(Notification/Push)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "clientId",
+						"value": "e48a1eba-968b-11ee-b9d1-0242ac120002",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"push_notification_status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.17.1.65:9001/notifications/push",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"65"
+					],
+					"port": "9001",
+					"path": [
+						"notifications",
+						"push"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Настройки уведомлений(Notification/Email)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "clientId",
+						"value": "eab32a02-968b-11ee-b9d1-0242ac120002",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "clientId",
+						"value": "e30c4d74-968b-11ee-b9d1-0242ac120002",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "clientId",
+						"value": "d7f143c2-968b-11ee-b9d1-0242ac120002",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "clientId",
+						"value": "e835d8b0-968b-11ee-b9d1-0242ac120002",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "clientId",
+						"value": "e48a1eba-968b-11ee-b9d1-0242ac120002",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email_subscription_status\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.17.1.65:9001/notifications/emails",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"65"
+					],
+					"port": "9001",
+					"path": [
+						"notifications",
+						"emails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Изменение e-mail уведомления(Notification/email",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "clientId",
+						"value": "eab32a02-968b-11ee-b9d1-0242ac120002",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "clientId",
+						"value": "d7f143c2-968b-11ee-b9d1-0242ac120002",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "clientId",
+						"value": "e30c4d74-968b-11ee-b9d1-0242ac120002",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "clientId",
+						"value": "e835d8b0-968b-11ee-b9d1-0242ac120002",
+						"type": "text"
+					},
+					{
+						"key": "clientId",
+						"value": "e48a1eba-968b-11ee-b9d1-0242ac120002",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email_notification_status\": \"false\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.17.1.65:9001/notifications/email",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"65"
+					],
+					"port": "9001",
+					"path": [
+						"notifications",
+						"email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение настроек уведомления(Notification)",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "producer-card-controller",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Contact controller",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "clientId",
+						"value": "e835d8b0-968b-11ee-b9d1-0242ac120002",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"countryCode\": \"7\",\r\n  \"mobilePhone\": \"981443322\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.17.1.65:9001/security/contacts/mobile_phones",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"65"
+					],
+					"port": "9001",
+					"path": [
+						"security",
+						"contacts",
+						"mobile_phones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение всех списков валют",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.65:9001/exchange-rates",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"65"
+					],
+					"port": "9001",
+					"path": [
+						"exchange-rates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отображение информации о клиенте",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "clientId",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://172.17.1.65:9001/clients",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"65"
+					],
+					"port": "9001",
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отправка информации о подразделениях банка",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.65:9001/bank-branches",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"65"
+					],
+					"port": "9001",
+					"path": [
+						"bank-branches"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

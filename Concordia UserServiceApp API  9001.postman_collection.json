@@ -1,0 +1,564 @@
+{
+	"info": {
+		"_postman_id": "cf1d697b-89dd-4142-bc26-9deed8bfb674",
+		"name": "Concordia UserServiceApp API  9001",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23741924",
+		"_collection_link": "https://blue-meadow-354368.postman.co/workspace/My-Workspace~ecf76eeb-897b-49fe-8f41-d2322e09b063/collection/23741924-cf1d697b-89dd-4142-bc26-9deed8bfb674?action=share&source=collection_link&creator=23741924"
+	},
+	"item": [
+		{
+			"name": "Security session",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.14:9001/security/session?countryCode=7&mobilePhone=981443322",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"security",
+						"session"
+					],
+					"query": [
+						{
+							"key": "countryCode",
+							"value": "7"
+						},
+						{
+							"key": "mobilePhone",
+							"value": "981443322"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Security session contacts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://172.17.1.14:9001/security/session/contacts?docType=7&documentNumber=98144332",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"security",
+						"session",
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "docType",
+							"value": "7"
+						},
+						{
+							"key": "documentNumber",
+							"value": "98144332"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login controller mobile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"7\",\r\n  \"login\": \"9161231234\",\r\n  \"password\": \"Aa1234\",\r\n  \"type\": \"PHONE_NUMBER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.17.1.14:9001/v1/login/mobile",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"v1",
+						"login",
+						"mobile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login controller dokument",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": 0,\r\n  \"login\": 0,\r\n  \"password\": \"string\",\r\n  \"type\": \"DOCUMENT_NUMBER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.17.1.14:9001/v1/login/dokument",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"v1",
+						"login",
+						"dokument"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producer-card-controller",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.14:9001/card/",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"card",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-profile-controller",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"new_password\": \"string\",\r\n  \"new_password_repeated\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.17.1.14:9001/security/change_password",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"security",
+						"change_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Passport-recovery-controller",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"verification_id\": \"string\",\r\n  \"email_verification_code\": \"string\"\r\n}"
+				},
+				"url": {
+					"raw": "http://172.17.1.14:9001/security/change_password/verify",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"security",
+						"change_password",
+						"verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClientAPIs client id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.17.1.14:9001/v1/clients/?id=111",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"v1",
+						"clients",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "111"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClientAPIs clients",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"clientId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"firstName\": \"string\",\r\n    \"lastName\": \"string\",\r\n    \"patronymic\": \"string\",\r\n    \"dataAccession\": \"2023-12-12\",\r\n    \"clientStatus\": \"string\",\r\n    \"countryCode\": \"string\",\r\n    \"mobilePhone\": \"string\",\r\n    \"email\": \"string\",\r\n    \"documentDataList\": [\r\n      {\r\n        \"documentNumber\": \"string\",\r\n        \"docTypeId\": 0\r\n      }\r\n    ]\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.17.1.14:9001/v1/clients/",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"v1",
+						"clients",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClientAPIs delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.14:9001/v1/clients/delete/id?id",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"v1",
+						"clients",
+						"delete",
+						"id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Main-Controller unsecured",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.14:9001/unsecured",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"unsecured"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Main-Controller secured",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.14:9001/secured",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"secured"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Main-Controller info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.14:9001/info",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Main-Controller admin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.14:9001/admin",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registration-controller",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.14:9001/registration?countryCode=7&mobilePhone=926154912",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"registration"
+					],
+					"query": [
+						{
+							"key": "countryCode",
+							"value": "7"
+						},
+						{
+							"key": "mobilePhone",
+							"value": "926154912"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notification-Controller",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.14:9001/api/v1/notifications?clientId",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"api",
+						"v1",
+						"notifications"
+					],
+					"query": [
+						{
+							"key": "clientId",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exchange rates APIs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.14:9001/exchange-rates/",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"exchange-rates",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Card APIs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.14:9001/cards/",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"cards",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bank branch APIs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.14:9001/bank-branch/",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9001",
+					"path": [
+						"bank-branch",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "6643d1bf-d2e7-4b7a-863b-b728de2aad97",
+		"name": "Concordia CardServiceApp API 9006",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23741924",
+		"_collection_link": "https://blue-meadow-354368.postman.co/workspace/My-Workspace~ecf76eeb-897b-49fe-8f41-d2322e09b063/collection/23741924-6643d1bf-d2e7-4b7a-863b-b728de2aad97?action=share&source=collection_link&creator=23741924"
+	},
+	"item": [
+		{
+			"name": "CardApply",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"status\": \"PENDING\",\r\n  \"createdAt\": \"2023-12-11T09:52:33.092Z\",\r\n  \"applyType\": \"ORDERING_A_NEW_CARD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.17.1.14:9006/api/v1/cardApply",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9006",
+					"path": [
+						"api",
+						"v1",
+						"cardApply"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cards",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://172.17.1.14:9006/cards?userId=8fe75b9c-6f1d-11ee-b962-0242ac120002",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9006",
+					"path": [
+						"cards"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "8fe75b9c-6f1d-11ee-b962-0242ac120002"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CardID",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "clientId",
+						"value": "8fe75b9c-6f1d-11ee-b962-0242ac120002",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://172.17.1.14:9006/cards/59aab5f7-11a4-411b-b98c-5c2fddf098a7",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9006",
+					"path": [
+						"cards",
+						"59aab5f7-11a4-411b-b98c-5c2fddf098a7"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"cardName\": \"string\",\r\n    \"currency\": \"RUB\",\r\n    \"paymentSystem\": \"MIR\",\r\n    \"levelCard\": \"CLASSIC\",\r\n    \"cardType\": \"PLASTIC\",\r\n    \"serviceMonth\": 0\r\n  }\r\n]"
+				},
+				"url": {
+					"raw": "http://172.17.1.14:9006/products",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9006",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.14:9006/products/73eaf677-fb6b-49b2-9d1e-4c5353387f46?productId",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9006",
+					"path": [
+						"products",
+						"73eaf677-fb6b-49b2-9d1e-4c5353387f46"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CardAPIs cardBlock",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://172.17.1.14:9006/cards/:cardApplyId/block/",
+					"protocol": "http",
+					"host": [
+						"172",
+						"17",
+						"1",
+						"14"
+					],
+					"port": "9006",
+					"path": [
+						"cards",
+						":cardApplyId",
+						"block",
+						""
+					],
+					"variable": [
+						{
+							"key": "cardApplyId",
+							"value": "59aab5f7-11a4-411b-b98c-5c2fddf098a7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
